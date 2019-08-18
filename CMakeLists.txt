@@ -20,3 +20,6 @@ SET(OpenCV_LIBRARIES ${OpenCV_LIBS})
 
 add_executable(test src/test.cpp)
 target_link_libraries(test ${OpenCV_LIBRARIES})
+
+add_executable(test1 src/test/test1.cpp)
+target_link_libraries(test1 ${OpenCV_LIBRARIES})
