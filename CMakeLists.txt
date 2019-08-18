@@ -23,3 +23,7 @@ target_link_libraries(test ${OpenCV_LIBRARIES})
 
 add_executable(test1 src/test/test1.cpp)
 target_link_libraries(test1 ${OpenCV_LIBRARIES})
+
+
+add_executable(test2 src/test/test2.cpp)
+target_link_libraries(test2 ${OpenCV_LIBRARIES})
