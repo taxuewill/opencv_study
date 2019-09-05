@@ -14,3 +14,22 @@ cv::Mat ColorDetector::process(const cv::Mat &image){
     }
     return result;
 }
+
+cv::Mat ColorDetector::operator()(const cv::Mat &image){
+    cv::Mat output;
+    // compute absolute difference with target color
+    cv::absdiff(image,cv::Scalar(target),output);
+    // split the channels into 3 images
+    std::vector<cv::Mat> images;
+    cv::split(output,images);
+    // add the 3 channels (saturation might occurs here)
+    output= images[0]+images[1]+images[2];
+    // apply threshold
+    cv::threshold(output,
+            output,
+            maxDist,
+            25,
+            cv::THRESH_TOZERO);
+
+    return output;
+}

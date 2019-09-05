@@ -17,7 +17,9 @@ int main(int argc,char** argv){
     cv::Vec3b target(230,190,130);
     cdetector.setTargetColor(target);
 
-    cv::Mat result = cdetector.process(image);
+    // cv::Mat result = cdetector.process(image);
+    cv::Mat result = cdetector(image);
+    cout<<"result type "<<result.type()<<endl;
     
     
     cv::namedWindow("ShowImage");

@@ -44,6 +44,7 @@ public:
 	  }
 
       cv::Mat process(const cv::Mat &image);
+	  cv::Mat operator()(const cv::Mat &image);
 
 };
 
