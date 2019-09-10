@@ -18,14 +18,23 @@ int main(int argc,char** argv){
     cdetector.setTargetColor(target);
 
     // cv::Mat result = cdetector.process(image);
-    cv::Mat result = cdetector(image);
-    cout<<"result type "<<result.type()<<endl;
+    // cv::Mat result = cdetector(image);
+    // cout<<"result type "<<result.type()<<endl;
+    cv::Mat result;
+    cv::floodFill(image,
+        cv::Point(100,50),
+        cv::Scalar(255,255,255),
+        (cv::Rect *)0,
+        cv::Scalar(35,35,35),
+        cv::Scalar(35,35,35),
+        cv::FLOODFILL_FIXED_RANGE
+        );
     
     
     cv::namedWindow("ShowImage");
-    cv::imshow("ShowImage",result);
+    cv::imshow("ShowImage",image);
     cv::waitKey(10*1000);
-    cv::imwrite("./result.jpg",result);
+    cv::imwrite("./result.jpg",image);
 
     return 0;
 }
