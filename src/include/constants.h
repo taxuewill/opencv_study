@@ -6,4 +6,5 @@
 #define  IMAGE_GROUP "../resources/group.jpg"
 #define  IMAGE_WAVES "../resources/waves.jpg"
 #define  IMAGE_BOOK "../resources/book.jpg"
+#define  IMAGE_BINARY "../resources/binary.bmp"
 #endif

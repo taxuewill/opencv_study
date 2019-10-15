@@ -46,3 +46,7 @@ target_link_libraries(test7 ${OpenCV_LIBRARIES})
 
 add_executable(test8 src/test/test8.cpp )
 target_link_libraries(test8 ${OpenCV_LIBRARIES})
+
+
+add_executable(c5t1 src/chapter5/c5t1.cpp )
+target_link_libraries(c5t1 ${OpenCV_LIBRARIES})
