@@ -13,7 +13,9 @@ int main()
     cv::namedWindow("Image");
     cv::imshow("Image", image);
     cv::Mat eroded;
-    cv::erode(image,eroded,cv::Mat());
+    cv::Mat element(7,7,CV_8U,cv::Scalar(1));
+    // cv::erode(image,eroded,element);
+    cv::erode(image,eroded,cv::Mat(),cv::Point(-1,-1),3);
         // Display the eroded image
 	cv::namedWindow("Eroded Image");
 	cv::imshow("Eroded Image",eroded);
@@ -29,6 +31,8 @@ int main()
 
     cv::namedWindow("Temp Image");
 	cv::imshow("Temp Image",temp);
+
+    
 
     cv::waitKey();
     return 0;

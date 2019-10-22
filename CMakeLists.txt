@@ -18,8 +18,8 @@ INCLUDE_DIRECTORIES(
     ) 
 SET(OpenCV_LIBRARIES ${OpenCV_LIBS})
 
-add_executable(test src/test.cpp)
-target_link_libraries(test ${OpenCV_LIBRARIES})
+#add_executable(test src/test.cpp)
+#target_link_libraries(test ${OpenCV_LIBRARIES})
 
 add_executable(test1 src/test/test1.cpp)
 target_link_libraries(test1 ${OpenCV_LIBRARIES})
@@ -50,3 +50,15 @@ target_link_libraries(test8 ${OpenCV_LIBRARIES})
 
 add_executable(c5t1 src/chapter5/c5t1.cpp )
 target_link_libraries(c5t1 ${OpenCV_LIBRARIES})
+
+add_executable(c5t2 src/chapter5/c5t2.cpp )
+target_link_libraries(c5t2 ${OpenCV_LIBRARIES})
+
+add_executable(c5t3 src/chapter5/c5t3.cpp )
+target_link_libraries(c5t3 ${OpenCV_LIBRARIES})
+
+add_executable(c5t4 src/chapter5/c5t4.cpp )
+target_link_libraries(c5t4 ${OpenCV_LIBRARIES})
+
+add_executable(c5t5 src/chapter5/c5t5.cpp )
+target_link_libraries(c5t5 ${OpenCV_LIBRARIES})
