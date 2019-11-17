@@ -1,6 +1,7 @@
 #include <opencv2/core.hpp>
 #include <opencv2/imgproc.hpp>
 #include <opencv2/highgui.hpp>
+#include <opencv2/imgproc/types_c.h>
 
 #include "constants.h"
 
@@ -39,7 +40,7 @@ int main()
     cv::Mat sMarkers;
     markers.convertTo(sMarkers,CV_32S);
 
-    cv::cvtColor(image,image,CV_GRAY2BGR);
+    cv::cvtColor(image,image,CV_RGB2GRAY);
 
     cv::watershed(image,sMarkers);
 
