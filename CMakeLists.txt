@@ -68,3 +68,6 @@ target_link_libraries(c6t1 ${OpenCV_LIBRARIES})
 ]]
 add_executable(tools src/tools/tool.cpp)
 target_link_libraries(tools ${OpenCV_LIBRARIES})
+
+add_executable(maptool src/tools/maptool.cpp)
+target_link_libraries(maptool ${OpenCV_LIBRARIES})
