@@ -71,3 +71,7 @@ target_link_libraries(tools ${OpenCV_LIBRARIES})
 
 add_executable(server src/domainsocket/server.c)
 add_executable(client src/domainsocket/client.c)
+
+add_executable(maptool src/tools/maptool.cpp)
+target_link_libraries(maptool ${OpenCV_LIBRARIES})
+
